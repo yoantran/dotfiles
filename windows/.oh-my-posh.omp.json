@@ -1,0 +1,78 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#874228",
+          "foreground": "#ff9566",
+          "leading_diamond": "\u256d\u2500\ue0b6",
+          "powerline_symbol": "\ue0b4",
+          "style": "diamond",
+          "template": " {{ .UserName }}@{{ .HostName }} ",
+          "type": "session"
+        },
+        {
+          "background": "#ff9566",
+          "foreground": "transparent",
+          "powerline_symbol": "\ue0b4",
+          "style": "powerline",
+          "properties": {
+            "folder_icon": "\ue5fe",
+            "folder_separator_icon": " \ue0b5 ",
+            "home_icon": "\uf4e2",
+            "style": "agnoster"
+          },
+          "template": " {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "background": "#636232",
+          "foreground": "#f7d66a",
+          "powerline_symbol": "\ue0b4",
+          "style": "powerline",
+          "properties": {
+            "branch_icon": "\ue725 ",
+            "cherry_pick_icon": "\ue29b ",
+            "commit_icon": "\uf417 ",
+            "fetch_status": false,
+            "fetch_upstream_icon": false,
+            "merge_icon": "\ue727 ",
+            "no_commits_icon": "\uf0c3 ",
+            "rebase_icon": "\ue728 ",
+            "revert_icon": "\uf0e2 ",
+            "tag_icon": "\uf412 "
+          },
+          "template": " {{ .HEAD }} ",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#ff9566",
+          "style": "plain",
+          "template": "\u2570\u2500",
+          "type": "text"
+        },
+        {
+          "foreground": "#8acd8f",
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": "{{ if .Error }}<#ff9566>\u276e</> 🐰💬 <#ff5b6a>Pyon pyon! What happened...? ⚠️ {{ .Code }}</> <#ff9566>\u276f</>{{ else }}<#ff9566>\u276e</> 🐰💬 Pyon! What do you need, Yoan-senpai? <#ff9566>\u276f</>{{ end }}",
+          "type": "status"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}
